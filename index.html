@@ -9,6 +9,10 @@
   	<h1>Tech Exercise 3 - Location Stuff</h1>
   	<button onclick="getLocation()">Try It</button>
   	<p id="loc">stuff</p>
+  	<br>
+  	<p id="alpha">a</p>
+  	<p id="beta">b</p>
+  	<p id="gamma">g</p>
 
   	<script>
 		var x = document.getElementById("loc");
@@ -23,6 +27,24 @@
 		function showPosition(position) {
 		  x.innerHTML = "Latitude: " + position.coords.latitude + 
 		  "<br>Longitude: " + position.coords.longitude; 
+		}
+	</script>
+	<script type="text/javascript">
+		var a = document.getElementById("alpha");
+		var b = document.getElementById("beta");
+		var g = document.getElementById("gamma");
+
+		window.addEventListener("deviceorientation", handleOrientation, true);
+		
+		function handleOrientation(event) {
+  			var absolute = event.absolute;
+			var alpha    = event.alpha;
+			var beta     = event.beta;
+			var gamma    = event.gamma;
+
+			a.innerHTML = "Alpha: " + event.alpha;
+			b.innerHTML = "Alpha: " + event.beta;
+			g.innerHTML = "Alpha: " + event.gamma;
 		}
 	</script>
   </body>
