@@ -2,17 +2,18 @@
 <html>
 
   <head>
+  	<link rel="stylesheet" href="css/style.css">
     <title>Exercise 3 - Location</title>
   </head>
 
-  <body>
+  <body onload="getLocation()">
   	<h1>Tech Exercise 3 - Location Stuff</h1>
-  	<button onclick="getLocation()">Try It</button>
-  	<p id="loc">stuff</p>
   	<br>
-  	<p id="alpha">a</p>
-  	<p id="beta">b</p>
-  	<p id="gamma">g</p>
+  	<p id="loc">Location:</p>
+  	<br>
+  	<p id="alpha">Alpha:</p>
+  	<p id="beta">Beta:</p>
+  	<p id="gamma">Gamma:</p>
 
   	<script>
 		var x = document.getElementById("loc");
@@ -43,8 +44,8 @@
 			var gamma    = event.gamma;
 
 			a.innerHTML = "Alpha: " + event.alpha;
-			b.innerHTML = "Alpha: " + event.beta;
-			g.innerHTML = "Alpha: " + event.gamma;
+			b.innerHTML = "Beta: " + event.beta;
+			g.innerHTML = "Gamma: " + event.gamma;
 		}
 	</script>
   </body>
