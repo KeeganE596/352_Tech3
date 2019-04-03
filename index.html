@@ -11,6 +11,7 @@
   	<br>
   	<p id="loc">Location:</p>
   	<br>
+  	<p id="absolute">Absolute:</p>
   	<p id="alpha">Alpha:</p>
   	<p id="beta">Beta:</p>
   	<p id="gamma">Gamma:</p>
@@ -31,6 +32,7 @@
 		}
 	</script>
 	<script type="text/javascript">
+		var ab = document.getElementById("alpha");
 		var a = document.getElementById("alpha");
 		var b = document.getElementById("beta");
 		var g = document.getElementById("gamma");
@@ -43,6 +45,7 @@
 			var beta     = event.beta;
 			var gamma    = event.gamma;
 
+			ab.innerHTML = "Absolute: " + event.absolute;
 			a.innerHTML = "Alpha: " + event.alpha;
 			b.innerHTML = "Beta: " + event.beta;
 			g.innerHTML = "Gamma: " + event.gamma;
